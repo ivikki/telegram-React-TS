@@ -1,0 +1,303 @@
+.wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.panel {
+  width: 67px;
+  background-color: #404c58;
+
+  @media (min-width: 769px){
+    width: 87px;
+  }
+
+  .panel-menu {
+    background-color: inherit;
+    width: 67px;
+
+    @media (min-width: 769px){
+      width: 87px;
+    }
+
+    svg {
+      font-size: 23px;
+    }
+
+    li {
+      background-color: inherit;
+      padding: 10px 5px;
+      font-size: 12px;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        color: #999;
+      }
+
+      &.selected {
+        background-color: #212529;
+        color: deepskyblue;
+      }
+    }
+  }
+}
+
+.chains {
+  width: 100%;
+  margin: 0;
+  position: relative;
+
+  @media (min-width: 769px){
+    width: 35%;
+  }
+
+  &.container {
+
+    @media (min-width: 576px){
+      max-width: 685px;
+    }
+  }
+
+  .chains-menu-item {
+    cursor: pointer;
+    color: #999;
+    display: flex;
+    border: none;
+
+    &.selected {
+      background-color: deepskyblue;
+      color: white;
+    }
+
+    .user-name {
+      color: black;
+
+      span{
+        color: #999;
+      }
+    }
+
+    &.selected {
+      color: white;
+
+      span{
+        color: white;
+      }
+    }
+  }
+
+  .search {
+
+    .search-input {
+      background-color: #F2F2F2;
+      outline: none;
+      padding: 8px;
+      border-radius: 3px;
+    }
+
+    &:focus .search-apply{
+      z-index: 2;
+    }
+
+    .search-apply {
+      top: 14px;
+      right: 10px;
+      font-size: 16px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .avatar {
+    margin-right: 15px;
+  }
+}
+
+.chain-wrapper {
+  display: none;
+  width: 100%;
+  background-color: #C6EBFA;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 65px;
+
+  @media (min-width: 700px){
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.show {
+    position: absolute;
+    display: block;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 67px;
+    z-index: 2;
+
+    &.full-width {
+      left: 0;
+    }
+
+    @media (min-width: 700px){
+      position: relative;
+      left: 0;
+      width: 100%;
+    }
+
+  }
+
+  .icon-hide {
+    display: none;
+
+    @media (min-width: 700px){
+      display: inline-block;
+    }
+  }
+
+  .icon-show {
+    display: inline-block;
+
+    @media (min-width: 700px){
+      display: none;
+    }
+  }
+
+  .messages-wrapper p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .block-info {
+    background-color: white;
+
+    .user-block-info {
+      cursor: pointer;
+      padding-left: 50px;
+      flex-grow: 1;
+
+      @media (min-width: 700px){
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .block-message {
+    overflow-y: auto;
+  }
+
+  .message {
+
+    p {
+      white-space: pre;
+      background-color: white;
+      padding: 5px 10px;
+      margin: 10px 20px 0 20px;
+      display: inline-block;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  }
+
+  .new-message-wrapper {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .input-message {
+      button {
+        outline: none;
+      }
+
+      textarea {
+        outline: none;
+        resize: none;
+        margin-left: 10px;
+        padding: 15px 5px 5px;
+        line-height: 1.1;
+        font-size: 11px;
+        overflow: hidden;
+
+        @media (min-width: 375px){
+          font-size: 16px;
+        }
+      }
+  }
+
+  .message.my-message {
+    margin-left: auto;
+  }
+
+  .icon.active-icon {
+    color: deepskyblue;
+  }
+
+  input {
+    outline: none;
+  }
+
+  button {
+    background: none;
+  }
+}
+
+.wrapper-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  .menu {
+    opacity: 1;
+    width: 65%;
+    height: 100%;
+    z-index: 2;
+    background-color: white;
+    padding-bottom: 50px;
+    position: relative;
+
+    @media (min-width: 700px){
+      width: 30%;
+    }
+
+    @media (min-width: 1000px){
+      width: 20%;
+    }
+
+    .block-menu {
+      overflow-y: auto;
+    }
+  }
+
+  .bottom-menu {
+    bottom: 10px;
+    left: 15px;
+  }
+
+  .menu-shadow {
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+
+
+

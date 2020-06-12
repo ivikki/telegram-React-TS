@@ -1,0 +1,91 @@
+.settings-menu-wrapper {
+
+  .settings-menu {
+      li {
+        padding: 7px 20px;
+
+        @media (min-width: 700px){
+          padding: 13px 20px;
+        }
+      }
+  }
+
+  .interface-size {
+    @media (min-width: 700px){
+      margin-left: 40px;
+    }
+
+    span {
+      border-top: 3px solid #999;
+      font-size: 13px;
+
+      @media (min-width: 700px){
+        font-size: 16px;
+      }
+
+      &:first-child {
+        border-color: deepskyblue;
+      }
+    }
+  }
+}
+
+.close-buttons {
+  top: 17px;
+  right: 20px;
+}
+
+.modal {
+  padding: 20px;
+}
+
+.folders-modal {
+
+  .modal-content {
+    min-height: 80vh;
+    height: auto;
+  }
+}
+
+.new-folder-modal {
+
+  .modal-content {
+    width: 90%;
+    margin: 100px auto 0;
+
+    @media (min-width: 700px){
+      width: 70%;
+    }
+  }
+
+  .new-folder {
+    border-bottom: 3px solid #007bff;
+
+    input {
+      outline: none;
+    }
+  }
+}
+
+.title-modal {
+  padding-left: 40px;
+}
+
+.no-icon {
+  margin-left: 40px;
+}
+
+
+.info-modal {
+  li {
+    padding: 7px 20px;
+
+    @media (min-width: 700px){
+      padding: 13px 20px;
+    }
+  }
+
+  .username {
+    padding-left: 20px;
+  }
+}
