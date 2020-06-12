@@ -9,16 +9,16 @@ import { MESSENGER } from '../../constants/routes';
 import { instanceAPI, signIn } from '../../services/api.service';
 
 function * initializeSaga () {
-    const rawCountries = yield call(instanceAPI, {
-        method: 'GET',
-        url: '/countries.json'
-    });
+    // const rawCountries = yield call(instanceAPI, {
+    //     method: 'GET',
+    //     url: '/countries.json'
+    // });
 
-    const countries = rawCountries.map(el => ({ label: el.name, value: el.dial_code }));
-    yield put({ type: TYPE.META, countries, initialized: true });
+    // const countries = rawCountries.map((el: any) => ({ label: el.name, value: el.dial_code }));
+    // yield put({ type: TYPE.META, countries, initialized: true });
 }
 
-function * updateDataSaga (data) {
+function * updateDataSaga (data: any) {
     try {
         const user = yield call(signIn, data);
         yield call(appSaveUserSaga, user);

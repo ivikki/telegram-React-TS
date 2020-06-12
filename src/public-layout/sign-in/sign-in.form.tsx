@@ -11,8 +11,13 @@ import { Select } from '../../components/select';
 import { Input } from '../../components/input';
 import ReduxForm from '../../components/redux-form';
 
-const formValidation = values => {
-    const errors = {};
+interface IValues {
+    country: string,
+    phone: string
+}
+
+const formValidation = (values: IValues) => {
+    const errors: any = {};
     if (!values.country) {
         errors.country = 'Country is required';
     }

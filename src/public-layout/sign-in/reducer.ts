@@ -3,15 +3,23 @@
 // local dependencies
 import TYPE from './types';
 
-const initial = {
+interface IInitial {
+    initialized: boolean,
+    expectAnswer: boolean,
+    errorMessage: object,
+    countries: [],
+    user: object
+}
+
+const initial: IInitial = {
     initialized: false,
     expectAnswer: false,
-    errorMessage: null,
+    errorMessage: {},
     countries: [],
     user: {}
 };
 
-export default function (state = initial, action) {
+export default function (state: IInitial = initial, action: any) {
     const { type, ...options } = action;
     switch (type) {
         default:
@@ -26,4 +34,4 @@ export default function (state = initial, action) {
     return state;
 }
 
-export const selector = state => state.signIn;
+export const selector = (state: any) => state.signIn;
